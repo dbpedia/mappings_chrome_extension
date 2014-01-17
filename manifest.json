@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "DBpedia Template Mapping Utilities",
+  "description": "This extension inserts pre-compiled text into DBpedia template mappings.",
+  "version": "1.0",
+  "permissions" : ["tabs"],
+  
+  "content_scripts": [
+    {
+      "matches": ["http://mappings.dbpedia.org/index.php?title=Mapping_*&action=edit"],
+      "js": ["jquery.min.js", "mappings_filler.js"]
+    }
+  ]
+}
